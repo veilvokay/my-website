@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Intro from 'src/components/Intro';
 import LogoComponent from 'src/components/LogoComponent';
 import PowerButton from 'src/components/PowerButton';
 import SocialIcons from 'src/components/SocialIcons';
@@ -138,6 +140,7 @@ const MainPage = () => {
     return (
         <MainContainer>
             <DarkDiv click={click} />
+
             <Container>
                 <PowerButton />
                 <LogoComponent theme={click ? 'dark' : 'light'} />
@@ -153,35 +156,52 @@ const MainPage = () => {
                 </Center>
 
                 <Contact target='_blank' href={`mailto: ${PersonalInfo.emailAddress}`}>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Say hi...
-                    </h2>
+                    </motion.h2>
                 </Contact>
 
                 <Blog to='/blog'>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Blog
-                    </h2>
+                    </motion.h2>
                 </Blog>
                 <Work to='/work' click={click}>
-                    <h2>
+                    <motion.h2
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
                         Work
-                    </h2>
+                    </motion.h2>
                 </Work>
                 <BottomBar>
                     <About to='/about' click={click}>
-                        <h2>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
                         About.
-                        </h2>
+                        </motion.h2>
                     </About>
                     <Skills to='/skills'>
-                        <h2>
+                        <motion.h2
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
                         Skills.
-                        </h2>
+                        </motion.h2>
                     </Skills>
                 </BottomBar>
 
             </Container>
+
+            {click && <Intro isActive={click} />}
         </MainContainer>
     );
 };
