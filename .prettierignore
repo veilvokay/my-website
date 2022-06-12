@@ -1,0 +1,7 @@
+# Ignore artifacts:
+# web
+# emails
+# *.html
+# *.sass
+*.ejs
+*.yml
