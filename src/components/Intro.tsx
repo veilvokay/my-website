@@ -66,6 +66,24 @@ const Text = styled.div`
     }
 `;
 
+const ImgMotionDiv = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`;
+
+const ImgBox = styled.div`
+    padding: 1.5rem 3rem;
+    border: 1px solid ${props => props.theme.text};
+    
+    span {
+        font-size: 1.75rem;
+    }
+`;
+
 const Intro = (props: IIntroProps) => {
     return (
         <Box
@@ -81,13 +99,16 @@ const Intro = (props: IIntroProps) => {
                 </Text>
             </SubBox>
             <SubBox>
-                <motion.div
+                <ImgMotionDiv
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                 >
-                    <img className='pic' src={Me} alt='Profile Pic' />
-                </motion.div>
+                    {/* <img className='pic' src={Me} alt='Profile Pic' /> */}
+                    <ImgBox>
+                        <span>IMG</span>
+                    </ImgBox>
+                </ImgMotionDiv>
             </SubBox>
         </Box>
     );

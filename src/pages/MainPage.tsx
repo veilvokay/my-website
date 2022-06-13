@@ -5,7 +5,7 @@ import Intro from 'src/components/Intro';
 import LogoComponent from 'src/components/LogoComponent';
 import PowerButton from 'src/components/PowerButton';
 import SocialIcons from 'src/components/SocialIcons';
-import { IconYinYang } from 'src/components/SVGs';
+import { IconSharingan } from 'src/components/SVGs';
 import PersonalInfo from 'src/sitemap/PersonalInfo';
 import styled, { keyframes } from 'styled-components';
 
@@ -88,7 +88,7 @@ const rotate = keyframes`
         transform: rotate(0);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 `;
 
@@ -111,6 +111,11 @@ const Center = styled.button<IClickInteractionProps>`
 
     &>:first-child {
         animation: ${rotate} infinite 1.5s linear;
+    }
+
+    path:first-of-type {
+        transition: all 1s ease;
+        fill: ${props => props.click ? 'red' : 'transparent'};
     }
 
     &>:last-child {
@@ -147,7 +152,7 @@ const MainPage = () => {
                 <SocialIcons theme={click ? 'dark' : 'light'} />
 
                 <Center click={click}>
-                    <IconYinYang
+                    <IconSharingan
                         onClick={handleClick}
                         width={click ? 120 : 200}
                         height={click ? 120 : 200}

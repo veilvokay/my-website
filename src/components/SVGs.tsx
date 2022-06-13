@@ -8,6 +8,49 @@ interface ISVGProps {
     onClick?: () => void;
 }
 
+export const IconSharingan = (props: ISVGProps) => {
+    return (
+        <svg
+            aria-hidden="true"
+            data-prefix="fas"
+            data-icon="power-off"
+            className="svg-inline--fa fa-power-off fa-w-16"
+            viewBox="0 0 359 358"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <path
+                d="M354 179C354 275.084 275.887 353 179.5 353C83.1132 353 5 275.084 5 179C5 82.9156 83.1132 5 179.5 5C275.887 5 354 82.9156 354 179Z"
+                stroke="black"
+                strokeWidth="10"
+            />
+            <circle cx="179" cy="179" r="37" fill={props.fill ? props.fill : 'currentColor'} />
+            <circle
+                cx="179"
+                cy="179"
+                r="94"
+                stroke="black"
+                strokeWidth="4"
+            />
+            <path
+                d="M179.5 112.5C146.5 111 147 80.0001 157.5 63.0002C180.252 30.8222 204.5 41.5 230.5 62.5001C210.5 54.5 198.5 56 192.5 62.5C215 79 207.5 111 179.5 112.5Z"
+                fill={props.fill ? props.fill : 'currentColor'}
+                stroke="black"/>
+            <path
+                d="M122.01 212.167C137.211 241.496 110.114 256.563 90.1418 255.97C50.899 252.355 48.0221 226.017 53.2087 193C56.2804 214.321 63.5795 223.963 72.2086 225.909C75.2481 198.173 106.711 188.669 122.01 212.167Z"
+                fill={props.fill ? props.fill : 'currentColor'}
+                stroke="black"
+            />
+            <path
+                d="M236.5 212.559C254.299 184.73 280.896 200.663 290.368 218.256C306.859 254.049 285.488 269.71 254.301 281.726C271.23 268.406 275.931 257.264 273.301 248.817C247.762 260.053 223.799 237.558 236.5 212.559Z"
+                fill={props.fill ? props.fill : 'currentColor'}
+                stroke="black"
+            />
+        </svg>
+    );
+};
+
 export const IconPower = (props: ISVGProps) => {
     return (
         <svg
