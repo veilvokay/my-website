@@ -1,4 +1,4 @@
-interface IBlogPost {
+export interface IBlogPost {
     id: number,
     name: string,
     tags: string[],

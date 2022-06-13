@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { DarkTheme } from './Themes';
 
 interface ILogoComponentProps {
-    theme: 'dark' | 'light'
+    theme?: 'dark' | 'light'
 }
 
 const Logo = styled.h1`

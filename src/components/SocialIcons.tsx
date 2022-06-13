@@ -4,7 +4,7 @@ import { IconFacebook, IconGithub, IconTwitter, IconYouTube } from './SVGs';
 import { DarkTheme } from './Themes';
 
 interface ISocialIconsProps {
-    theme: 'dark' | 'light',
+    theme?: 'dark' | 'light',
 }
 
 const Icons = styled.div`
